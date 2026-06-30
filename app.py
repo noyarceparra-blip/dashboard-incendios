@@ -1,15 +1,6 @@
-import os
-import sys
-
-# Truco definitivo: Instalamos las librerías necesarias automáticamente si no existen
-try:
-    import openpyxl
-except ImportError:
-    import subprocess
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "openpyxl"])
-
 import streamlit as st
 import pandas as pd
+import openpyxl
 
 # 1. Configuración de la interfaz web
 st.set_page_config(page_title="Dashboard Incendios 2025-2026", layout="wide", page_icon="🔥")
